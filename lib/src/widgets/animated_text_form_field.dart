@@ -43,12 +43,15 @@ class AnimatedTextFormField extends StatefulWidget {
     this.validator,
     this.onFieldSubmitted,
     this.onSaved,
+    this.isRemoveSuffix = false,
     this.autocorrect = false,
+    this.contentPadding,
     this.autofillHints,
   })  : assert((inertiaController == null && inertiaDirection == null) ||
             (inertiaController != null && inertiaDirection != null)),
         super(key: key);
 
+  final bool? isRemoveSuffix;
   final Interval? interval;
   final AnimationController? loadingController;
   final AnimationController? inertiaController;
@@ -68,6 +71,7 @@ class AnimatedTextFormField extends StatefulWidget {
   final ValueChanged<String>? onFieldSubmitted;
   final FormFieldSetter<String>? onSaved;
   final TextFieldInertiaDirection? inertiaDirection;
+  final EdgeInsets? contentPadding;
 
   @override
   State<AnimatedTextFormField> createState() => _AnimatedTextFormFieldState();
@@ -174,6 +178,7 @@ class _AnimatedTextFormFieldState extends State<AnimatedTextFormField> {
   }
 
   Widget? _buildInertiaAnimation(Widget? child) {
+    print("isRemoveSuffix ${widget.isRemoveSuffix!}");
     if (widget.inertiaController == null) {
       return child;
     }
@@ -193,17 +198,20 @@ class _AnimatedTextFormFieldState extends State<AnimatedTextFormField> {
 
   InputDecoration _getInputDecoration(ThemeData theme) {
     return InputDecoration(
+      contentPadding: widget.contentPadding,
       labelText: widget.labelText,
       iconColor: theme.primaryColor,
-      prefixIconColor:  theme.primaryColor,
+      prefixIconColor: theme.primaryColor,
       suffixIconColor: theme.primaryColor,
       prefixIcon: _buildInertiaAnimation(widget.prefixIcon),
-      suffixIcon: _buildInertiaAnimation(widget.loadingController != null
-          ? FadeTransition(
-              opacity: suffixIconOpacityAnimation,
-              child: widget.suffixIcon,
-            )
-          : widget.suffixIcon),
+      suffixIcon: widget.isRemoveSuffix!
+          ? null
+          : _buildInertiaAnimation(widget.loadingController != null
+              ? FadeTransition(
+                  opacity: suffixIconOpacityAnimation,
+                  child: widget.suffixIcon,
+                )
+              : widget.suffixIcon),
     );
   }
 
@@ -212,7 +220,7 @@ class _AnimatedTextFormFieldState extends State<AnimatedTextFormField> {
     final theme = Theme.of(context);
 
     Widget textField = Theme(
-      child:  TextFormField(
+      child: TextFormField(
         cursorColor: theme.primaryColor,
         controller: widget.controller,
         focusNode: widget.focusNode,
@@ -227,14 +235,12 @@ class _AnimatedTextFormFieldState extends State<AnimatedTextFormField> {
         autocorrect: widget.autocorrect,
         autofillHints: widget.autofillHints,
       ),
-      data:Theme.of(context).copyWith(
+      data: Theme.of(context).copyWith(
         colorScheme: ThemeData().colorScheme.copyWith(
-          primary:theme.primaryColor,
-        ),
+              primary: theme.primaryColor,
+            ),
       ),
-
     );
-
 
     if (widget.loadingController != null) {
       textField = ScaleTransition(

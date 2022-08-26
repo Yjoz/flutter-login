@@ -166,6 +166,8 @@ class _AdditionalSignUpCardState extends State<_AdditionalSignUpCard>
                 formField.rowItem!,
                 Expanded(
                   child: AnimatedTextFormField(
+                    contentPadding: formField.contentPadding,
+                    isRemoveSuffix: formField.isRemoveSuffix!,
                     controller: _nameControllers[formField.keyName],
                     // interval: _fieldAnimationIntervals[widget.formFields.indexOf(formField)],
                     loadingController: widget.loadingController,
@@ -189,6 +191,8 @@ class _AdditionalSignUpCardState extends State<_AdditionalSignUpCard>
             ),
           } else ...{
             AnimatedTextFormField(
+              contentPadding: formField.contentPadding,
+              isRemoveSuffix: formField.isRemoveSuffix,
               controller: _nameControllers[formField.keyName],
               // interval: _fieldAnimationIntervals[widget.formFields.indexOf(formField)],
               loadingController: widget.loadingController,

@@ -1,4 +1,4 @@
-#Fri Aug 26 11:24:51 GST 2022
+#Fri Aug 26 12:05:04 GST 2022
 base.0=/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

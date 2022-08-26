@@ -25,6 +25,10 @@ class UserFormField {
 
   final Widget? rowItem;
 
+  final bool? isRemoveSuffix;
+
+  final EdgeInsets? contentPadding;
+
   const UserFormField({
     required this.keyName,
     displayName,
@@ -32,6 +36,8 @@ class UserFormField {
     this.icon,
     this.fieldValidator,
     this.rowItem,
+    this.isRemoveSuffix = false,
+    this.contentPadding = EdgeInsets.zero,
     this.userType = LoginUserType.name,
   }) : displayName = displayName ?? keyName;
 }
