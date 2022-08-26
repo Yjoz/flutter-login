@@ -1,0 +1,13 @@
+com.example.example.app-jetified-window-1.0.0-beta04-0 /Users/treinetic/.gradle/caches/transforms-3/4da34b61bfffbabbbeb4bb7e99380ec8/transformed/jetified-window-1.0.0-beta04/res
+com.example.example.app-jetified-window-java-1.0.0-beta04-1 /Users/treinetic/.gradle/caches/transforms-3/dfab8c058394a259012b3044da68a292/transformed/jetified-window-java-1.0.0-beta04/res
+com.example.example.app-core-1.6.0-2 /Users/treinetic/.gradle/caches/transforms-3/ef017f5c6bc41ec876bcc2a800f49435/transformed/core-1.6.0/res
+com.example.example.app-jetified-annotation-experimental-1.1.0-3 /Users/treinetic/.gradle/caches/transforms-3/f2f77254ee9a0ea4c80416bdd72f73ac/transformed/jetified-annotation-experimental-1.1.0/res
+com.example.example.app-debug-4 /Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/debug/res
+com.example.example.app-main-5 /Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/res
+com.example.example.app-pngs-6 /Users/treinetic/Desktop/Flutter Apps/flutter-login/example/build/app/generated/res/pngs/debug
+com.example.example.app-resValues-7 /Users/treinetic/Desktop/Flutter Apps/flutter-login/example/build/app/generated/res/resValues/debug
+com.example.example.app-rs-8 /Users/treinetic/Desktop/Flutter Apps/flutter-login/example/build/app/generated/res/rs/debug
+com.example.example.app-mergeDebugResources-9 /Users/treinetic/Desktop/Flutter Apps/flutter-login/example/build/app/intermediates/incremental/debug/mergeDebugResources/merged.dir
+com.example.example.app-mergeDebugResources-10 /Users/treinetic/Desktop/Flutter Apps/flutter-login/example/build/app/intermediates/incremental/debug/mergeDebugResources/stripped.dir
+com.example.example.app-merged_res-11 /Users/treinetic/Desktop/Flutter Apps/flutter-login/example/build/app/intermediates/merged_res/debug
+com.example.example.app-packaged_res-12 /Users/treinetic/Desktop/Flutter Apps/flutter-login/example/build/url_launcher_android/intermediates/packaged_res/debug

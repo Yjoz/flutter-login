@@ -1,0 +1,94 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.example"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+9        android:targetSdkVersion="31" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/debug/AndroidManifest.xml:10:5-66
+11-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/debug/AndroidManifest.xml:10:22-64
+12    <!--
+13     Flutter needs it to communicate with the running application
+14         to allow setting breakpoints, to provide hot reload, etc.
+15    -->
+16    <application
+16-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:8:5-32:19
+17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+17-->[androidx.core:core:1.6.0] /Users/treinetic/.gradle/caches/transforms-3/ef017f5c6bc41ec876bcc2a800f49435/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+18        android:debuggable="true"
+19        android:icon="@mipmap/ic_launcher"
+19-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:10:9-43
+20        android:label="flutter_login [D]" >
+20-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:9:9-38
+21        <activity
+21-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:11:9-28:20
+22            android:name="io.flutter.embedding.android.FlutterActivity"
+22-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:12:13-72
+23            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+23-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:16:13-144
+24            android:exported="true"
+24-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:13:13-36
+25            android:hardwareAccelerated="true"
+25-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:17:13-47
+26            android:launchMode="singleTop"
+26-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:14:13-43
+27            android:theme="@style/LaunchTheme"
+27-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:15:13-47
+28            android:windowSoftInputMode="adjustResize" >
+28-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:18:13-55
+29
+30            <!-- Theme to apply as soon as Flutter begins rendering frames -->
+31            <meta-data
+31-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:20:13-23:19
+32                android:name="io.flutter.embedding.android.NormalTheme"
+32-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:21:17-72
+33                android:resource="@style/NormalTheme" />
+33-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:22:17-54
+34
+35            <intent-filter>
+35-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:24:13-27:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:25:17-68
+36-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:25:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:26:17-76
+38-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:26:27-74
+39            </intent-filter>
+40        </activity>
+41
+42        <meta-data
+42-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:29:9-31:33
+43            android:name="flutterEmbedding"
+43-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:30:13-44
+44            android:value="2" />
+44-->/Users/treinetic/Desktop/Flutter Apps/flutter-login/example/android/app/src/main/AndroidManifest.xml:31:13-30
+45
+46        <activity
+46-->[:url_launcher_android] /Users/treinetic/Desktop/Flutter Apps/flutter-login/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-13:74
+47            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+47-->[:url_launcher_android] /Users/treinetic/Desktop/Flutter Apps/flutter-login/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-74
+48            android:exported="false"
+48-->[:url_launcher_android] /Users/treinetic/Desktop/Flutter Apps/flutter-login/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-37
+49            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+49-->[:url_launcher_android] /Users/treinetic/Desktop/Flutter Apps/flutter-login/example/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-71
+50
+51        <uses-library
+51-->[androidx.window:window:1.0.0-beta04] /Users/treinetic/.gradle/caches/transforms-3/4da34b61bfffbabbbeb4bb7e99380ec8/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+52            android:name="androidx.window.extensions"
+52-->[androidx.window:window:1.0.0-beta04] /Users/treinetic/.gradle/caches/transforms-3/4da34b61bfffbabbbeb4bb7e99380ec8/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+53            android:required="false" />
+53-->[androidx.window:window:1.0.0-beta04] /Users/treinetic/.gradle/caches/transforms-3/4da34b61bfffbabbbeb4bb7e99380ec8/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+54        <uses-library
+54-->[androidx.window:window:1.0.0-beta04] /Users/treinetic/.gradle/caches/transforms-3/4da34b61bfffbabbbeb4bb7e99380ec8/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+55            android:name="androidx.window.sidecar"
+55-->[androidx.window:window:1.0.0-beta04] /Users/treinetic/.gradle/caches/transforms-3/4da34b61bfffbabbbeb4bb7e99380ec8/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+56            android:required="false" />
+56-->[androidx.window:window:1.0.0-beta04] /Users/treinetic/.gradle/caches/transforms-3/4da34b61bfffbabbbeb4bb7e99380ec8/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+57    </application>
+58
+59</manifest>

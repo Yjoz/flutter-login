@@ -23,12 +23,15 @@ class UserFormField {
   /// Defaults to LoginUserType.user
   final LoginUserType userType;
 
+  final Widget? rowItem;
+
   const UserFormField({
     required this.keyName,
     displayName,
     this.defaultValue = '',
     this.icon,
     this.fieldValidator,
+    this.rowItem,
     this.userType = LoginUserType.name,
   }) : displayName = displayName ?? keyName;
 }

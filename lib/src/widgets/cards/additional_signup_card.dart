@@ -160,23 +160,53 @@ class _AdditionalSignUpCardState extends State<_AdditionalSignUpCard>
           const SizedBox(
             height: 10,
           ),
-          AnimatedTextFormField(
-            controller: _nameControllers[formField.keyName],
-            // interval: _fieldAnimationIntervals[widget.formFields.indexOf(formField)],
-            loadingController: widget.loadingController,
-            width: width,
-            labelText: formField.displayName,
-            prefixIcon:
-                formField.icon ?? const Icon(FontAwesomeIcons.solidCircleUser),
-            keyboardType: TextFieldUtils.getKeyboardType(formField.userType),
-            autofillHints: [
-              TextFieldUtils.getAutofillHints(formField.userType)
-            ],
-            textInputAction: formField.keyName == widget.formFields.last.keyName
-                ? TextInputAction.done
-                : TextInputAction.next,
-            validator: formField.fieldValidator,
-          ),
+          if (formField.rowItem != null) ...{
+            Row(
+              children: [
+                formField.rowItem!,
+                Expanded(
+                  child: AnimatedTextFormField(
+                    controller: _nameControllers[formField.keyName],
+                    // interval: _fieldAnimationIntervals[widget.formFields.indexOf(formField)],
+                    loadingController: widget.loadingController,
+                    width: width,
+                    labelText: formField.displayName,
+                    prefixIcon: formField.icon ??
+                        const Icon(FontAwesomeIcons.solidCircleUser),
+                    keyboardType:
+                        TextFieldUtils.getKeyboardType(formField.userType),
+                    autofillHints: [
+                      TextFieldUtils.getAutofillHints(formField.userType)
+                    ],
+                    textInputAction:
+                        formField.keyName == widget.formFields.last.keyName
+                            ? TextInputAction.done
+                            : TextInputAction.next,
+                    validator: formField.fieldValidator,
+                  ),
+                ),
+              ],
+            ),
+          } else ...{
+            AnimatedTextFormField(
+              controller: _nameControllers[formField.keyName],
+              // interval: _fieldAnimationIntervals[widget.formFields.indexOf(formField)],
+              loadingController: widget.loadingController,
+              width: width,
+              labelText: formField.displayName,
+              prefixIcon: formField.icon ??
+                  const Icon(FontAwesomeIcons.solidCircleUser),
+              keyboardType: TextFieldUtils.getKeyboardType(formField.userType),
+              autofillHints: [
+                TextFieldUtils.getAutofillHints(formField.userType)
+              ],
+              textInputAction:
+                  formField.keyName == widget.formFields.last.keyName
+                      ? TextInputAction.done
+                      : TextInputAction.next,
+              validator: formField.fieldValidator,
+            ),
+          },
           const SizedBox(
             height: 5,
           )
