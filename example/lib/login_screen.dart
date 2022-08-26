@@ -106,7 +106,7 @@ class LoginScreen extends StatelessWidget {
         const UserFormField(keyName: 'Surname'),
         UserFormField(
           keyName: 'phone_number',
-          displayName: 'Phone Number',
+          displayName: 'Phone Number ',
           userType: LoginUserType.phone,
           fieldValidator: (value) {
             var phoneRegExp = RegExp(
