@@ -394,6 +394,8 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
     return ScaleTransition(
       scale: _buttonScaleAnimation,
       child: AnimatedButton(
+
+        loadingColor: theme.brightness == Brightness.dark ? theme.primaryColor: theme.colorScheme.secondary,
         controller: _submitController,
         text: auth.isLogin ? messages.loginButton : messages.signupButton,
         onPressed: () => _submit(),
