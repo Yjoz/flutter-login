@@ -148,6 +148,8 @@ class _ConfirmSignupCardState extends State<_ConfirmSignupCard>
     return ScaleTransition(
       scale: widget.loadingController,
       child: AnimatedButton(
+        loadingColor: theme.brightness == Brightness.dark ? theme.primaryColor: theme.colorScheme.secondary,
+
         controller: _fieldSubmitController,
         text: messages.confirmSignupButton,
         onPressed: !_isSubmitting ? _submit : null,

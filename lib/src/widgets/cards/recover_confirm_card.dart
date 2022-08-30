@@ -134,6 +134,8 @@ class _ConfirmRecoverCardState extends State<_ConfirmRecoverCard>
 
   Widget _buildSetPasswordButton(ThemeData theme, LoginMessages messages) {
     return AnimatedButton(
+      loadingColor: theme.brightness == Brightness.dark ? theme.primaryColor: theme.colorScheme.secondary,
+
       controller: _submitController,
       text: messages.setPasswordButton,
       onPressed: !_isSubmitting ? _submit : null,

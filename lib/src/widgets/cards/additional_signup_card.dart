@@ -223,6 +223,8 @@ class _AdditionalSignUpCardState extends State<_AdditionalSignUpCard>
     return ScaleTransition(
       scale: _buttonScaleAnimation,
       child: AnimatedButton(
+        loadingColor: theme.brightness == Brightness.dark ? theme.primaryColor: theme.colorScheme.secondary,
+
         controller: _submitController,
         text: messages.additionalSignUpSubmitButton,
         onPressed: !_isSubmitting ? _submit : null,

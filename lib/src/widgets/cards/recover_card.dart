@@ -99,6 +99,8 @@ class _RecoverCardState extends State<_RecoverCard>
 
   Widget _buildRecoverButton(ThemeData theme, LoginMessages messages) {
     return AnimatedButton(
+      loadingColor: theme.brightness == Brightness.dark ? theme.primaryColor: theme.colorScheme.secondary,
+
       controller: _submitController,
       text: messages.recoverPasswordButton,
       onPressed: !_isSubmitting ? _submit : null,
