@@ -3,7 +3,6 @@ class TermOfService {
   bool mandatory;
   String text;
   String? linkUrl;
-  LaunchMode? launchMode;
   String validationErrorMessage;
   bool initialValue;
   bool _checked = false;
@@ -13,7 +12,6 @@ class TermOfService {
       required this.text,
       this.linkUrl,
       this.initialValue = false,
-      this.launchMode,
       this.validationErrorMessage = 'Required'}) {
     _checked = initialValue;
   }
