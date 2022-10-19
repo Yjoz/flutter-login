@@ -6,12 +6,14 @@ class TermOfService {
   String validationErrorMessage;
   bool initialValue;
   bool _checked = false;
+  dynamic? onClickLink;
   TermOfService(
       {required this.id,
       required this.mandatory,
       required this.text,
       this.linkUrl,
       this.initialValue = false,
+      this.onClickLink, 
       this.validationErrorMessage = 'Required'}) {
     _checked = initialValue;
   }
