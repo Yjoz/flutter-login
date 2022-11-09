@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 class TermOfService {
   String id;
   bool mandatory;
@@ -7,6 +8,8 @@ class TermOfService {
   bool initialValue;
   bool _checked = false;
   dynamic? onClickLink;
+  Color checkColor;
+  Color activeColor;
   TermOfService(
       {required this.id,
       required this.mandatory,
@@ -14,6 +17,8 @@ class TermOfService {
       this.linkUrl,
       this.initialValue = false,
       this.onClickLink, 
+      required this.checkColor,
+      required this.activeColor,
       this.validationErrorMessage = 'Required'}) {
     _checked = initialValue;
   }
