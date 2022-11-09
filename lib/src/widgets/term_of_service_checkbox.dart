@@ -22,6 +22,8 @@ class _TermCheckboxState extends State<TermCheckbox> {
     return CheckboxFormField(
       onChanged: (value) => widget.termOfService.setStatus(value!),
       initialValue: widget.termOfService.initialValue,
+      checkColor: widget.termOfService.checkColor,
+      activeColor: widget.termOfService.activeColor,
       title: widget.termOfService.linkUrl != null
           ? InkWell(
             onTap: () {
@@ -72,6 +74,8 @@ class CheckboxFormField extends FormField<bool> {
       {Key? key,
       required Widget title,
       required FormFieldValidator<bool> validator,
+      required Color checkColor,
+      required Color activeColor,
       String validationErrorMessage = '',
       bool initialValue = false,
       bool autoValidate = true,
@@ -85,6 +89,8 @@ class CheckboxFormField extends FormField<bool> {
                 dense: true,
                 title: title,
                 value: state.value,
+                checkColor: checkColor,
+                activeColor:activeColor,
                 onChanged: (value) {
                   onChanged(value);
                   state.didChange(value);
